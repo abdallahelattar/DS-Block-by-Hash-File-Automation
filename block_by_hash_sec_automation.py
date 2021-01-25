@@ -9,7 +9,7 @@ user_info = str(input("Username: "))
 password_info = getpass.getpass("Password: ")
 host_info = str(input("DSM Hostname or IP (if you are using DSaaS just Press Enter): "))
 
-if (host_info == None):
+if (host_info == ''):
 	dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
 else:
 	port_info = str(input("DSM port: "))
